@@ -1,0 +1,63 @@
+*{box-sizing:border-box}
+:root{--pink:#ffdce7;--rose:#ea7899;--deep:#623b47;--paper:#fffdf7;--cream:#fff7f3}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--deep);font-family:"Baloo 2",sans-serif;background:radial-gradient(circle at 20% 15%,#fff 0 4%,transparent 25%),radial-gradient(circle at 90% 60%,#ffe7ee 0 7%,transparent 28%),#fff5f1;overflow-x:hidden}
+main{position:relative}
+.sky-doodles{position:fixed;inset:0;pointer-events:none;z-index:1}
+.doodle{position:absolute;color:#e99ab0;font-family:"Patrick Hand";opacity:.45;animation:float 7s ease-in-out infinite}
+.hero{min-height:100svh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px 35px;text-align:center;overflow:hidden}
+.tiny-note{font:1rem "Patrick Hand";color:#b86b7e}
+.date{display:inline-block;margin:14px 0 0;padding:4px 14px;background:#fff;border:2px dashed #eea5b8;border-radius:99px;box-shadow:3px 4px 0 #f5ced8;font-size:.8rem;transform:rotate(-2deg)}
+h1,h2{font-family:"Patrick Hand";font-weight:400;line-height:.85;color:#5a3340}
+h1{font-size:clamp(4.7rem,18vw,8.5rem);margin:18px 0 8px;transform:rotate(-2deg);letter-spacing:-.04em}
+h1 span,h2 span{color:var(--rose)}
+.little-line{font:1.5rem "Patrick Hand";color:#a75d72;transform:rotate(1deg)}
+.sticker{position:absolute;background:#fff;border:6px solid #fff;border-radius:25px;box-shadow:0 8px 0 #efb9c7,0 14px 28px #a95c701b;overflow:hidden;z-index:4}
+.sticker-source img{width:100%;height:100%;object-fit:cover}
+.sticker-left{left:5%;top:17%;width:118px;height:96px;transform:rotate(-9deg)}
+.source-a img{object-position:20% 50%;transform:scale(1.45)}
+.sticker-right{right:5%;top:15%;width:105px;height:105px;transform:rotate(8deg)}
+.source-b img{object-position:75% 50%;transform:scale(1.5)}
+.chi-sticker{position:absolute;z-index:6;background:#fff;border:5px solid #fff;border-radius:25px;box-shadow:0 7px 0 #efb6c5,0 12px 18px #a94d671b;color:#d66d8a;font-family:"Patrick Hand";text-align:center}
+.chi-face{font-family:"Patrick Hand";font-size:2.4rem;line-height:1;color:#6c4b54;letter-spacing:-.12em}
+.chi-wave{left:10%;bottom:19%;padding:12px 12px 8px;transform:rotate(-8deg)}
+.chi-wave span{font-size:1rem}
+.chi-point{right:8%;bottom:17%;padding:10px 12px 8px;transform:rotate(7deg)}
+.chi-point .arm{display:block;color:#e27898;font-size:1.7rem;line-height:.7}
+.point-text{font-size:.95rem}
+.chi-heart{left:6%;top:44%;padding:10px;transform:rotate(9deg)}
+.heart-float{display:block;color:#ef789b;font-size:1.6rem;animation:pop 1.5s ease-in-out infinite}
+.gift-button{position:relative;z-index:7;border:3px solid white;background:#e97b9c;color:white;border-radius:22px;padding:14px 22px;font:600 1rem "Baloo 2";box-shadow:0 7px 0 #c85c7d,0 14px 24px #a84d6820;cursor:pointer;transition:.2s}
+.gift-button:hover{transform:translateY(-4px) rotate(-1deg)}
+.scroll-cue{margin-top:18px;color:#cf7890;font-size:1.4rem}
+.letter{min-height:100svh;background:#ffeef3;position:relative;display:flex;align-items:center;justify-content:center;padding:100px 18px;overflow:hidden}
+.letter-card{width:min(650px,94vw);position:relative;background:var(--paper);padding:55px 38px 42px;border-radius:7px;box-shadow:9px 11px 0 #efb7c5,0 30px 55px #a94d6817;transform:rotate(-1deg)}
+.tape{position:absolute;width:135px;height:34px;background:#ffe9aa;opacity:.82;top:-16px}.tape-a{left:18%;transform:rotate(-5deg)}.tape-b{right:16%;transform:rotate(5deg)}
+.scribble{font:1.2rem "Patrick Hand";color:#df7894;text-align:center}
+.heart-stamp{position:absolute;right:24px;top:23px;color:#ed91aa;font-size:1.8rem;transform:rotate(10deg)}
+.letter-card h2{font-size:clamp(3.8rem,14vw,6rem);margin:22px 0}
+.message{font:clamp(1.35rem,4.5vw,1.8rem)/1.45 "Patrick Hand";margin:0;color:#694550}
+.signature{font:1.8rem "Patrick Hand";color:#df6e90;text-align:right;margin-top:28px}
+.little-hearts{text-align:center;color:#ec91a8;margin:25px 0}
+.continue-button,.again{border:0;background:#ffe0e8;color:#b34f70;border-radius:999px;padding:11px 18px;font:1rem "Patrick Hand";box-shadow:3px 4px 0 #efb3c3;cursor:pointer}
+.chi-peek{left:5%;bottom:13%;padding:10px;transform:rotate(-8deg)}
+.chi-peek span{display:block;font-size:.9rem}
+.floating-element{position:absolute;font-size:3rem;color:#df829b}.elem-bow{right:9%;top:14%;transform:rotate(9deg)}.elem-star{left:8%;top:18%}
+.ending{min-height:100svh;background:#ffd9e5;display:flex;align-items:center;justify-content:center;padding:70px 18px;position:relative;overflow:hidden}
+.ending-card{width:min(620px,94vw);background:#fffaf3;border:5px solid white;border-radius:30px;padding:42px 24px;text-align:center;box-shadow:10px 12px 0 #eeb4c3,0 28px 60px #a94d6819;position:relative;z-index:8;transform:rotate(1deg)}
+.ending-card h2{font-size:clamp(3.5rem,14vw,6rem);margin:14px 0}
+.ending-copy{font:1.35rem/1.45 "Patrick Hand";color:#76515b}
+.scene-photo{width:180px;height:135px;margin:25px auto;overflow:hidden;border:6px solid white;border-radius:25px;box-shadow:0 7px 0 #efb8c6;transform:rotate(-3deg)}
+.scene-photo img{width:100%;height:100%;object-fit:cover}
+.final-line{font:1.7rem "Patrick Hand";color:#dc6d8e}.final-name{font:1.8rem "Patrick Hand";color:#b65b76;margin:5px 0 18px}
+.chi-pop-field{position:absolute;inset:0;z-index:5;pointer-events:none}
+.pop{opacity:0;transform:scale(.2) rotate(0deg)}
+.ending:not(.hidden) .pop{animation:popIn .55s cubic-bezier(.2,1.6,.4,1) forwards}
+.ending:not(.hidden) .p1{left:5%;top:15%;animation-delay:.05s}.ending:not(.hidden) .p2{right:6%;top:12%;animation-delay:.15s}.ending:not(.hidden) .p3{left:9%;top:50%;animation-delay:.25s}.ending:not(.hidden) .p4{right:8%;top:46%;animation-delay:.35s}.ending:not(.hidden) .p5{left:18%;bottom:10%;animation-delay:.45s}.ending:not(.hidden) .p6{right:18%;bottom:8%;animation-delay:.55s}
+.pop span{display:block;font-size:.9rem}
+footer{text-align:center;padding:24px;background:#fff4f6;color:#b87587;font:1rem "Patrick Hand"}
+.hidden{display:none!important}
+@keyframes float{50%{transform:translateY(-12px) rotate(5deg)}}
+@keyframes pop{50%{transform:scale(1.15) rotate(-8deg)}}
+@keyframes popIn{0%{opacity:0;transform:scale(.2) rotate(-25deg)}70%{opacity:1;transform:scale(1.12) rotate(7deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@media(max-width:600px){.sticker-left{left:1%;top:12%;width:92px;height:75px}.sticker-right{right:1%;top:12%;width:82px;height:82px}.chi-wave{left:2%;bottom:13%}.chi-point{right:2%;bottom:12%}.chi-heart{left:3%;top:43%}.letter-card{padding:48px 25px 36px}.chi-peek{left:2%}.pop{transform:scale(.2)}}
